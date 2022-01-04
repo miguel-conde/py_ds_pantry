@@ -131,6 +131,10 @@ class Blockchain:
         This function serves as an interface to add the pending
         transactions to the blockchain by adding them to the block
         and figuring out Proof Of Work.
+
+         El proceso de poner transacciones no confirmadas en un bloque y calcular la prueba de trabajo es 
+         conocido como el minado [mining] de bloques. Una vez que el nonce que satisface nuestra condición 
+         es averiguado, podemos decir que el bloque ha sido minado, y es colocado en el blockchain.
         """
         if not self.unconfirmed_transactions:
             return False
