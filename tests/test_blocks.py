@@ -14,4 +14,7 @@ print("transactions = {}".format(probe.transactions))
 print("timestamp = {}".format(probe.timestamp))
 print("previous_hash = {}".format(probe.previous_hash))
 
+probe
+print(probe)
+
 print("hash = {}".format(probe.compute_hash()))

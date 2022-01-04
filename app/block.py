@@ -40,3 +40,26 @@ class Block:
         """
         block_string = json.dumps(self.__dict__, sort_keys=True)
         return sha256(block_string.encode()).hexdigest()
+
+    def __str__(self):
+        out_str = """
+        Block:
+            index: {index}
+            transactions: {transactions}
+            timestamp: {timestamp}
+            previous_hash: {previous_hash}
+        """.format(index = self.index, \
+                   transactions = self.transactions, \
+                   timestamp = self.timestamp, \
+                   previous_hash = self.previous_hash)
+
+        return(out_str)
+
+    def __repr__(self):
+        out_str = "Block({index}, {transactions}, {timestamp}, '{previous_hash}')" \
+            .format(index = self.index, \
+                   transactions = self.transactions, \
+                   timestamp = self.timestamp, \
+                   previous_hash = self.previous_hash)
+
+        return(out_str)
